@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('role:user')->get('/user', function () {
+    echo "User";
+});

@@ -14,6 +14,12 @@
                         </div>
                     @endif
 
+                    @role("user")
+                    Anda adalah user!
+                    @endrole
+                    @role("admin")
+                    Adnda adalah admin!
+                    @endrole
                     @guest
                         Anda Belum Login
                         @else
